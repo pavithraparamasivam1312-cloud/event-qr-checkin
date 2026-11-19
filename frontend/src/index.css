@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #060913;
+    color: #f1f5f9;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0F19;
+}
+::-webkit-scrollbar-thumb {
+  background: #2E1065;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6D28D9;
+}
+
+/* Print Styles for Badges */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .printable-badge-area, .printable-badge-area * {
+    visibility: visible;
+  }
+  .printable-badge-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
